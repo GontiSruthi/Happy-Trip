@@ -1,4 +1,4 @@
-package com.myapp.trip.entity;
+package com.myapp.trip.model;
 
 public class Registration {
 
