@@ -5,7 +5,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 import com.myapp.trip.model.BookingTicket;
 
-@RestResource(path = "Booking-details")
+@RestResource(path = "BookingTickets-details")
 public interface BookingTicketRepository extends JpaRepository<BookingTicket, Integer> {
 
 }

@@ -1,11 +1,7 @@
 package com.myapp.trip.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,93 +11,87 @@ import javax.persistence.Id;
 public class BookingTicket {
 
 	@Column
-	private String fromcity;
+	private String from_city;
 	@Column
-	private String tocity;
+	private String to_city;
 	@Column
-	private Date date_of_travel;
+	private String travel_date;
 	@Column
-	private int no_of_seats;
-
-	enum Classes {
-		Business, Economy;
-	}
-
-	@Enumerated(EnumType.STRING)
+	private int seats;
 	@Column
-	private Classes classes;
+	private String classes;
 	@Column
-	private int no_of_passesnger;
+	private int passenger_no;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Bookingreference_no;
+	private int Booking_reference_no;
 
-	public BookingTicket(String fromcity, String tocity, Date date_of_travel, int no_of_seats, Classes classes,
-			int no_of_passesnger, int bookingreference_no) {
-		this.fromcity = fromcity;
-		this.tocity = tocity;
-		this.date_of_travel = date_of_travel;
-		this.no_of_seats = no_of_seats;
+	public BookingTicket(String from_city, String to_city, String travel_date, int seats, String classes,
+			int passenger_no, int booking_reference_no) {
+		this.from_city = from_city;
+		this.to_city = to_city;
+		this.travel_date = travel_date;
+		this.seats = seats;
 		this.classes = classes;
-		this.no_of_passesnger = no_of_passesnger;
-		Bookingreference_no = bookingreference_no;
+		this.passenger_no = passenger_no;
+		Booking_reference_no = booking_reference_no;
 	}
 
-	public String getFromcity() {
-		return fromcity;
+	public String getFrom_city() {
+		return from_city;
 	}
 
-	public void setFromcity(String fromcity) {
-		this.fromcity = fromcity;
+	public void setFrom_city(String from_city) {
+		this.from_city = from_city;
 	}
 
-	public String getTocity() {
-		return tocity;
+	public String getTo_city() {
+		return to_city;
 	}
 
-	public void setTocity(String tocity) {
-		this.tocity = tocity;
+	public void setTo_city(String to_city) {
+		this.to_city = to_city;
 	}
 
-	public Date getDate_of_travel() {
-		return date_of_travel;
+	public String getTravel_date() {
+		return travel_date;
 	}
 
-	public void setDate_of_travel(Date date_of_travel) {
-		this.date_of_travel = date_of_travel;
+	public void setTravel_date(String travel_date) {
+		this.travel_date = travel_date;
 	}
 
-	public int getNo_of_seats() {
-		return no_of_seats;
+	public int getSeats() {
+		return seats;
 	}
 
-	public void setNo_of_seats(int no_of_seats) {
-		this.no_of_seats = no_of_seats;
+	public void setSeats(int seats) {
+		this.seats = seats;
 	}
 
-	public Classes getClasses() {
+	public String getClasses() {
 		return classes;
 	}
 
-	public void setClasses(Classes classes) {
+	public void setClasses(String classes) {
 		this.classes = classes;
 	}
 
-	public int getNo_of_passesnger() {
-		return no_of_passesnger;
+	public int getPassenger_no() {
+		return passenger_no;
 	}
 
-	public void setNo_of_passesnger(int no_of_passesnger) {
-		this.no_of_passesnger = no_of_passesnger;
+	public void setPassenger_no(int passenger_no) {
+		this.passenger_no = passenger_no;
 	}
 
-	public int getBookingreference_no() {
-		return Bookingreference_no;
+	public int getBooking_reference_no() {
+		return Booking_reference_no;
 	}
 
-	public void setBookingreference_no(int bookingreference_no) {
-		Bookingreference_no = bookingreference_no;
+	public void setBooking_reference_no(int booking_reference_no) {
+		Booking_reference_no = booking_reference_no;
 	}
 
 }
