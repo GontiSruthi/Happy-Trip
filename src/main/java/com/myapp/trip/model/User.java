@@ -38,6 +38,19 @@ public class User {
 	@Column
 	private String password;
 
+	protected User(int id, String name, Gender gender, int age, String address, String country, long contact,
+			String emailid, String password) {
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+		this.address = address;
+		this.country = country;
+		this.contact = contact;
+		this.emailid = emailid;
+		this.password = password;
+	}
+
 	public int getId() {
 		return id;
 	}
