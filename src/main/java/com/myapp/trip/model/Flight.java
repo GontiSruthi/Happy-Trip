@@ -19,9 +19,9 @@ public class Flight {
 	@Column
 	private String flight_name;
 	@Column
-	private int Airline_code;
+	private String airline_code;
 	@Column
-	private String Airline_name;
+	private String airline_name;
 	@Column
 	private int capacity;
 	@Column
@@ -33,15 +33,15 @@ public class Flight {
 	@Column
 	private String depature_Time;
 	@Column
-	private float ticket_Cost;
+	private double ticket_Cost;
 
-	public Flight(int flight_no, String flight_name, int airline_code, String airline_name, int capacity,
+	public Flight(int flight_no, String flight_name, String airline_code, String airline_name, int capacity,
 			String from_City, String to_City, String arrival_Time, String depature_Time, float ticket_Cost) {
 		super();
 		this.flight_no = flight_no;
 		this.flight_name = flight_name;
-		Airline_code = airline_code;
-		Airline_name = airline_name;
+		this.airline_code = airline_code;
+		this.airline_name = airline_name;
 		this.capacity = capacity;
 		this.from_City = from_City;
 		this.to_City = to_City;
@@ -66,20 +66,20 @@ public class Flight {
 		this.flight_name = flight_name;
 	}
 
-	public int getAirline_code() {
-		return Airline_code;
+	public String getAirline_code() {
+		return airline_code;
 	}
 
-	public void setAirline_code(int airline_code) {
-		Airline_code = airline_code;
+	public void setAirline_code(String airline_code) {
+		this.airline_code = airline_code;
 	}
 
 	public String getAirline_name() {
-		return Airline_name;
+		return airline_name;
 	}
 
 	public void setAirline_name(String airline_name) {
-		Airline_name = airline_name;
+		this.airline_name = airline_name;
 	}
 
 	public int getCapacity() {
@@ -122,11 +122,12 @@ public class Flight {
 		this.depature_Time = depature_Time;
 	}
 
-	public float getTicket_Cost() {
+	public double getTicket_Cost() {
 		return ticket_Cost;
 	}
 
-	public void setTicket_Cost(float ticket_Cost) {
+	public void setTicket_Cost(double ticket_Cost) {
 		this.ticket_Cost = ticket_Cost;
 	}
+
 }
